@@ -1,0 +1,17 @@
+<div class="flex h-screen bg-gray-100">
+  <aside class="w-84 bg-white shadow-md">
+    <app-side-bar></app-side-bar>
+  </aside>
+
+  <div class="flex-1 flex flex-col overflow-hidden">
+    <header class="shadow-md">
+      <app-header-filters></app-header-filters>
+    </header>
+
+    <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 p-6">
+      <app-filter></app-filter>
+       <router-outlet></router-outlet> 
+      <!-- <app-dashboard-content></app-dashboard-content> -->
+    </main>
+  </div>
+</div>

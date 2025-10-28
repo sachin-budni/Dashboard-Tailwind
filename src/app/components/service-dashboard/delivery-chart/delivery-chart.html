@@ -1,0 +1,42 @@
+<div class="mt-6">
+  
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+   @for (chart of charts; track chart.title) {
+
+     <div class="bg-white p-6 rounded-lg drop-shadow border border-gray-200 transition-all duration-300 ease-in-out hover:shadow-lg">
+       <h2 class="text-xl text-gray-400 drop-shadow">{{ chart.title }}</h2>
+ 
+       <div class="chart-wrapper">
+         <canvas
+           baseChart
+           [data]="chart.data"
+           [options]="chart.config"
+           [type]="'pie'">
+         </canvas>
+       </div>
+ 
+       <!-- ✅ Custom Angular HTML legend -->
+       <div class="custom-legend">
+         @for (label of chart.data.labels;track i; let i = $index) {
+           <div class="flex items-center mb-1 cursor-pointer">
+             
+             <span class="w-4 h-4 rounded-md border-radius-4 drop-shadow" 
+               [style.backgroundColor]="chart.data.datasets[0].backgroundColor[i]">
+             </span>
+             <i-lucide
+               [img]="chevronRight"
+               [size]="22"
+               class="text-gray-400 mx-1">
+             </i-lucide>
+   
+             <span class="text-[16px] text-[#6b79a1] drop-shadow">
+               {{ label }} : <b>{{ chart.data.datasets[0].data[i] }}</b>
+             </span>
+           </div>
+         }
+       </div>
+     </div>
+   }
+   
+  </div>
+</div>

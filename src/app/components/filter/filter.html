@@ -1,0 +1,38 @@
+<div class="bg-white mb-4 rounded-lg border border-gray-200 py-4  drop-shadow">
+  <div class="flex items-center pb-4">
+    <div class="flex color-gray-200 text-center font-medium">
+      <i-lucide [img]="funnelIcon" class="ml-2 flex items-center text-gray-500" [size]="18"></i-lucide>
+      <p class="ml-1 mr-2 text-gray-500 whitespace-nowrap drop-shadow">Filters : </p>
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <select class="border rounded-md border-none px-3 min-w-48 py-2 font-medium bg-gray-100 drop-shadow">
+        <option>District</option>
+      </select>
+      <select class="border rounded-md border-none px-3 min-w-48 py-2 font-medium bg-gray-100 drop-shadow">
+        <option>All Mandals</option>
+      </select>
+      <select class="border rounded-md border-none px-3 min-w-48 py-2 font-medium bg-gray-100 drop-shadow">
+        <option>All Facilities</option>
+      </select>
+      <select class="border rounded-md border-none px-3 min-w-48 py-2 font-medium bg-gray-100 drop-shadow">
+        <option>All Village Secretariat</option>
+      </select>
+    </div>
+  </div>
+  <div class="flex items-center gap-4 flex-wrap">
+    <div class="flex color-gray-200 text-center font-medium">
+      <p class="ml-5 text-gray-500  whitespace-nowrap drop-shadow">Search By : </p>
+    </div>
+    <div class="grid grid-flow-col grid-rows-1 gap-4">
+      <input type="date" placeholder="Start Date"
+        class="border border-gray-200 rounded-md px-3 min-w-48 py-2 font-medium drop-shadow" />
+    </div>
+    <div class="grid grid-flow-col grid-rows-1 gap-4">
+      <input type="date" placeholder="End Date"
+        class="border border-gray-200 rounded-md px-3 min-w-48 py-2 font-medium drop-shadow" />
+    </div>
+    <div>
+      <button class="border border-gray-200 rounded-lg px-3 py-2 drop-shadow whitespace-nowrap">Reset Filters</button>
+    </div>
+  </div>
+</div>

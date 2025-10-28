@@ -1,0 +1,24 @@
+
+<div class="flex items-center border-b border-gray-200 space-x-2 bg-white">
+  <div class="border-r p-5 border-gray-200 flex items-center">
+    <i-lucide [img]="PanelLeftIcon" class="mr-2 ml-2 drop-shadow" [size]="18"></i-lucide>
+  </div>
+  <div class="p-5 flex items-center">
+    @for (crumb of breadcrumbs;track $index) {
+      <a
+        [routerLink]="crumb.link"
+        class="text-gray-600 hover:text-blue-600 drop-shadow"
+        [class.font-semibold]="crumb.isActive"
+        [class.text-gray-900]="crumb.isActive"
+        [class.cursor-default]="crumb.isActive"
+        [class.pointer-events-none]="crumb.isActive"
+      >
+        {{ crumb.label }}
+      </a>
+      
+        @if ($index < breadcrumbs.length - 1) {
+          <i-lucide [img]="chevronRight" class="mr-2 ml-2 drop-shadow" [size]="18"></i-lucide>
+        }
+    }
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<!-- <div class="bg-white"> -->
+    <h2 class="text-3xl mb-4 text-[#6b79a1] drop-shadow">Service Dashboard</h2>
+    
+    <p class="text-[20px] mb-4 text-[#707082] drop-shadow">Comprehensive healthcare service delivery across all modules</p>
+    
+    
+    <div class="border-3 border-[#ffb8ba] rounded-xl p-[30px] bg-white">
+        <div class="flex items-center">
+            <div class="p-6 rounded-xl bg-[#11a8b5] mr-6">
+                <i-lucide [img]="babyIcon" class="mt-1 text-white drop-shadow" [size]="48"></i-lucide>
+            </div>
+            <div>
+                <h1 class="text-4xl mb-4 text-[#e24d89] drop-shadow">Pregnancy & Childbirth</h1>
+                <p class="text-[18px] text-[#6b79a1] drop-shadow">Comprehensive maternal health services and monitoring</p>
+            </div>
+        </div>
+        <app-pregnancy-state></app-pregnancy-state>
+        <app-delivery-chart></app-delivery-chart>
+        @for (tab of tabs; track tab.title) {
+            <app-card-chart [tab]="tab"></app-card-chart>
+        }
+        <app-performance-insights></app-performance-insights>
+    </div>
+<!-- </div> -->
