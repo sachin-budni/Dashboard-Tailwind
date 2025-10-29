@@ -2,7 +2,7 @@ pipeline {
     agent any
     tools {
         // Make sure 'node-20' is configured in Jenkins > Global Tool Configuration
-        nodejs 'node-24' 
+        nodejs 'node' 
     }
     stages {
         stage('Checkout') {
